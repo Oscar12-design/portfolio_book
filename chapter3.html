@@ -1,0 +1,2161 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Projet 2: Analyse de données de vente d’une entreprise de Smartphone &#8212; Mon portfolio</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/oscar.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mon portfolio</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/Oscar12-design/portfolio_book/master?urlpath=tree/docs/chapter3.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/Oscar12-design/portfolio_book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/Oscar12-design/portfolio_book/issues/new?title=Issue%20on%20page%20%2Fchapter3.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/chapter3.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Projet 2: Analyse de données de vente d’une entreprise de Smartphone</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="projet-2-analyse-de-donnees-de-vente-d-une-entreprise-de-smartphone">
+<h1>Projet 2: Analyse de données de vente d’une entreprise de Smartphone<a class="headerlink" href="#projet-2-analyse-de-donnees-de-vente-d-une-entreprise-de-smartphone" title="Permalink to this headline">#</a></h1>
+<p>Notre objectif dans ce projet d’analyse de donnée est de répondre à des questions business qui nous ont été soumis par l’équipe marketing. Nous analyserons les données mensuelles de ventes d’une société spécialiser dans la vente de smartphone et de gadgets.</p>
+<ol class="simple">
+<li><p><strong>Quel est le mois dans lequel nous avons réalisé le meilleur chiffre d’affaire</strong></p></li>
+<li><p><strong>Dans quelle ville nous avons réalisé un maximum de commande</strong></p></li>
+<li><p><strong>En quel moment doit on faire une camapgne publicitaire pour avoir plus de vente</strong></p></li>
+<li><p><strong>Quels produits se vend le plus</strong></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;drive&#39;</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;google.colab&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># %tensorflow_version 1.x</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;/content/drive/MyDrive/Data analysis/Sales_Data/Sales_Data&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ls
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>All_data.csv		 Sales_January_2019.csv  Sales_November_2019.csv
+Sales_April_2019.csv	 Sales_July_2019.csv	 Sales_October_2019.csv
+Sales_August_2019.csv	 Sales_June_2019.csv	 Sales_September_2019.csv
+Sales_December_2019.csv  Sales_March_2019.csv
+Sales_February_2019.csv  Sales_May_2019.csv
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span> 
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">seaborn</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">files</span> <span class="o">=</span>  <span class="p">[</span><span class="n">file</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;/content/drive/MyDrive/Data analysis/Sales_Data/Sales_Data&#39;</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sales_November_2019.csv
+Sales_May_2019.csv
+Sales_October_2019.csv
+Sales_September_2019.csv
+Sales_July_2019.csv
+Sales_June_2019.csv
+Sales_December_2019.csv
+Sales_April_2019.csv
+Sales_August_2019.csv
+Sales_March_2019.csv
+Sales_January_2019.csv
+Sales_February_2019.csv
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;/content/drive/MyDrive/Data analysis/Sales_Data/Sales_Data&#39;</span>
+
+<span class="n">all_data</span> <span class="o">=</span>  <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+  <span class="n">current_data</span> <span class="o">=</span>  <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span><span class="s1">&#39;/&#39;</span><span class="o">+</span> <span class="n">file</span><span class="p">)</span>
+  <span class="n">all_data</span> <span class="o">=</span>  <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">all_data</span><span class="p">,</span><span class="n">current_data</span><span class="p">])</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="n">all_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      Order ID                     Product Quantity Ordered Price Each  \
+0       278797            Wired Headphones                1      11.99   
+1       278798        USB-C Charging Cable                2      11.95   
+2       278799    Apple Airpods Headphones                1      150.0   
+3       278800            27in FHD Monitor                1     149.99   
+4       278801  Bose SoundSport Headphones                1      99.99   
+...        ...                         ...              ...        ...   
+12031   162004    Apple Airpods Headphones                1        150   
+12032   162005      AAA Batteries (4-pack)                2       2.99   
+12033   162006        USB-C Charging Cable                1      11.95   
+12034   162007        USB-C Charging Cable                1      11.95   
+12035   162008            27in FHD Monitor                1     149.99   
+
+           Order Date                         Purchase Address  
+0      11/21/19 09:54      46 Park St, New York City, NY 10001  
+1      11/17/19 10:03         962 Hickory St, Austin, TX 73301  
+2      11/19/19 14:56     464 Cherry St, Los Angeles, CA 90001  
+3      11/25/19 22:24           649 10th St, Seattle, WA 98101  
+4      11/09/19 13:56            522 Hill St, Boston, MA 02215  
+...               ...                                      ...  
+12031  02/12/19 22:02   227 Church St, San Francisco, CA 94016  
+12032  02/04/19 20:44  417 Jefferson St, Los Angeles, CA 90001  
+12033  02/24/19 06:31            498 8th St, Atlanta, GA 30301  
+12034  02/24/19 19:09             715 7th St, Dallas, TX 75001  
+12035  02/26/19 17:15       677 West St, Los Angeles, CA 90001  
+
+[186850 rows x 6 columns]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-66d37a75-c128-49e6-a2a7-64324c3121f2">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Order ID</th>
+      <th>Product</th>
+      <th>Quantity Ordered</th>
+      <th>Price Each</th>
+      <th>Order Date</th>
+      <th>Purchase Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>278797</td>
+      <td>Wired Headphones</td>
+      <td>1</td>
+      <td>11.99</td>
+      <td>11/21/19 09:54</td>
+      <td>46 Park St, New York City, NY 10001</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>278798</td>
+      <td>USB-C Charging Cable</td>
+      <td>2</td>
+      <td>11.95</td>
+      <td>11/17/19 10:03</td>
+      <td>962 Hickory St, Austin, TX 73301</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>278799</td>
+      <td>Apple Airpods Headphones</td>
+      <td>1</td>
+      <td>150.0</td>
+      <td>11/19/19 14:56</td>
+      <td>464 Cherry St, Los Angeles, CA 90001</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>278800</td>
+      <td>27in FHD Monitor</td>
+      <td>1</td>
+      <td>149.99</td>
+      <td>11/25/19 22:24</td>
+      <td>649 10th St, Seattle, WA 98101</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>278801</td>
+      <td>Bose SoundSport Headphones</td>
+      <td>1</td>
+      <td>99.99</td>
+      <td>11/09/19 13:56</td>
+      <td>522 Hill St, Boston, MA 02215</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>12031</th>
+      <td>162004</td>
+      <td>Apple Airpods Headphones</td>
+      <td>1</td>
+      <td>150</td>
+      <td>02/12/19 22:02</td>
+      <td>227 Church St, San Francisco, CA 94016</td>
+    </tr>
+    <tr>
+      <th>12032</th>
+      <td>162005</td>
+      <td>AAA Batteries (4-pack)</td>
+      <td>2</td>
+      <td>2.99</td>
+      <td>02/04/19 20:44</td>
+      <td>417 Jefferson St, Los Angeles, CA 90001</td>
+    </tr>
+    <tr>
+      <th>12033</th>
+      <td>162006</td>
+      <td>USB-C Charging Cable</td>
+      <td>1</td>
+      <td>11.95</td>
+      <td>02/24/19 06:31</td>
+      <td>498 8th St, Atlanta, GA 30301</td>
+    </tr>
+    <tr>
+      <th>12034</th>
+      <td>162007</td>
+      <td>USB-C Charging Cable</td>
+      <td>1</td>
+      <td>11.95</td>
+      <td>02/24/19 19:09</td>
+      <td>715 7th St, Dallas, TX 75001</td>
+    </tr>
+    <tr>
+      <th>12035</th>
+      <td>162008</td>
+      <td>27in FHD Monitor</td>
+      <td>1</td>
+      <td>149.99</td>
+      <td>02/26/19 17:15</td>
+      <td>677 West St, Los Angeles, CA 90001</td>
+    </tr>
+  </tbody>
+</table>
+<p>186850 rows × 6 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-66d37a75-c128-49e6-a2a7-64324c3121f2')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-66d37a75-c128-49e6-a2a7-64324c3121f2 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-66d37a75-c128-49e6-a2a7-64324c3121f2');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span> <span class="n">path</span><span class="o">+</span><span class="s1">&#39;/All_data.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span> <span class="o">=</span>  <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/drive/MyDrive/Data analysis/Sales_Data/Sales_Data/All_data.csv&#39;</span><span class="p">)</span>
+<span class="n">all_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-cbbcb82c-117a-4138-a05d-2a0051e53826">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Order ID</th>
+      <th>Product</th>
+      <th>Quantity Ordered</th>
+      <th>Price Each</th>
+      <th>Order Date</th>
+      <th>Purchase Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>278797</td>
+      <td>Wired Headphones</td>
+      <td>1</td>
+      <td>11.99</td>
+      <td>11/21/19 09:54</td>
+      <td>46 Park St, New York City, NY 10001</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>278798</td>
+      <td>USB-C Charging Cable</td>
+      <td>2</td>
+      <td>11.95</td>
+      <td>11/17/19 10:03</td>
+      <td>962 Hickory St, Austin, TX 73301</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>278799</td>
+      <td>Apple Airpods Headphones</td>
+      <td>1</td>
+      <td>150.0</td>
+      <td>11/19/19 14:56</td>
+      <td>464 Cherry St, Los Angeles, CA 90001</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>278800</td>
+      <td>27in FHD Monitor</td>
+      <td>1</td>
+      <td>149.99</td>
+      <td>11/25/19 22:24</td>
+      <td>649 10th St, Seattle, WA 98101</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>278801</td>
+      <td>Bose SoundSport Headphones</td>
+      <td>1</td>
+      <td>99.99</td>
+      <td>11/09/19 13:56</td>
+      <td>522 Hill St, Boston, MA 02215</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-cbbcb82c-117a-4138-a05d-2a0051e53826')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-cbbcb82c-117a-4138-a05d-2a0051e53826 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-cbbcb82c-117a-4138-a05d-2a0051e53826');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Order ID            545
+Product             545
+Quantity Ordered    545
+Price Each          545
+Order Date          545
+Purchase Address    545
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Supprimer les valeurs manquantes</span>
+<span class="n">all_data</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p><strong>Quel est le mois dans lequel nous avons réalisé le meilleur chiffre d’affaire</strong></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;Order Date&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0         11/21/19 09:54
+1         11/17/19 10:03
+2         11/19/19 14:56
+3         11/25/19 22:24
+4         11/09/19 13:56
+               ...      
+186845    02/12/19 22:02
+186846    02/04/19 20:44
+186847    02/24/19 06:31
+186848    02/24/19 19:09
+186849    02/26/19 17:15
+Name: Order Date, Length: 186305, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">month</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;Months&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;Order Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">month</span><span class="p">)</span>
+<span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;Months&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0         11
+1         11
+2         11
+3         11
+4         11
+          ..
+186845    02
+186846    02
+186847    02
+186848    02
+186849    02
+Name: Months, Length: 186305, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;Months&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;11&#39;, &#39;12&#39;, &#39;Order Date&#39;, &#39;05&#39;, &#39;06&#39;, &#39;10&#39;, &#39;09&#39;, &#39;07&#39;, &#39;08&#39;, &#39;01&#39;,
+       &#39;04&#39;, &#39;03&#39;, &#39;02&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[</span><span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;Months&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;Order Date&#39;</span><span class="p">]</span>
+<span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;Months&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;11&#39;, &#39;12&#39;, &#39;05&#39;, &#39;06&#39;, &#39;10&#39;, &#39;09&#39;, &#39;07&#39;, &#39;08&#39;, &#39;01&#39;, &#39;04&#39;, &#39;03&#39;,
+       &#39;02&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;Months&#39;</span><span class="p">]</span><span class="o">=</span> <span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;Months&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;Price Each&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;Price Each&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;Quantity Ordered&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;Quantity Ordered&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;Sales&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;Price Each&#39;</span><span class="p">]</span><span class="o">*</span> <span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;Quantity Ordered&#39;</span><span class="p">]</span>
+<span class="n">all_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Months&#39;</span><span class="p">)[</span><span class="s1">&#39;Sales&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Months
+1     1822256.73
+2     2202022.42
+3     2807100.38
+4     3390670.24
+5     3152606.75
+6     2577802.26
+7     2647775.76
+8     2244467.88
+9     2097560.13
+10    3736726.88
+11    3199603.20
+12    4613443.34
+Name: Sales, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">month</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">month</span><span class="p">,</span><span class="n">all_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Months&#39;</span><span class="p">)[</span><span class="s1">&#39;Sales&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">month</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Number of month&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Sales by months&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/chapter3_23_0.png" src="_images/chapter3_23_0.png" />
+</div>
+</div>
+<ol class="simple">
+<li><p><strong>Dans quelle ville nous avons réalisé un maximum de commande</strong></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-222b75e9-e973-40f1-b0f8-7b0945ba2d5c">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Order ID</th>
+      <th>Product</th>
+      <th>Quantity Ordered</th>
+      <th>Price Each</th>
+      <th>Order Date</th>
+      <th>Purchase Address</th>
+      <th>Months</th>
+      <th>Sales</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>278797</td>
+      <td>Wired Headphones</td>
+      <td>1.0</td>
+      <td>11.99</td>
+      <td>11/21/19 09:54</td>
+      <td>46 Park St, New York City, NY 10001</td>
+      <td>11</td>
+      <td>11.99</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>278798</td>
+      <td>USB-C Charging Cable</td>
+      <td>2.0</td>
+      <td>11.95</td>
+      <td>11/17/19 10:03</td>
+      <td>962 Hickory St, Austin, TX 73301</td>
+      <td>11</td>
+      <td>23.90</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>278799</td>
+      <td>Apple Airpods Headphones</td>
+      <td>1.0</td>
+      <td>150.00</td>
+      <td>11/19/19 14:56</td>
+      <td>464 Cherry St, Los Angeles, CA 90001</td>
+      <td>11</td>
+      <td>150.00</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>278800</td>
+      <td>27in FHD Monitor</td>
+      <td>1.0</td>
+      <td>149.99</td>
+      <td>11/25/19 22:24</td>
+      <td>649 10th St, Seattle, WA 98101</td>
+      <td>11</td>
+      <td>149.99</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>278801</td>
+      <td>Bose SoundSport Headphones</td>
+      <td>1.0</td>
+      <td>99.99</td>
+      <td>11/09/19 13:56</td>
+      <td>522 Hill St, Boston, MA 02215</td>
+      <td>11</td>
+      <td>99.99</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>186845</th>
+      <td>162004</td>
+      <td>Apple Airpods Headphones</td>
+      <td>1.0</td>
+      <td>150.00</td>
+      <td>02/12/19 22:02</td>
+      <td>227 Church St, San Francisco, CA 94016</td>
+      <td>2</td>
+      <td>150.00</td>
+    </tr>
+    <tr>
+      <th>186846</th>
+      <td>162005</td>
+      <td>AAA Batteries (4-pack)</td>
+      <td>2.0</td>
+      <td>2.99</td>
+      <td>02/04/19 20:44</td>
+      <td>417 Jefferson St, Los Angeles, CA 90001</td>
+      <td>2</td>
+      <td>5.98</td>
+    </tr>
+    <tr>
+      <th>186847</th>
+      <td>162006</td>
+      <td>USB-C Charging Cable</td>
+      <td>1.0</td>
+      <td>11.95</td>
+      <td>02/24/19 06:31</td>
+      <td>498 8th St, Atlanta, GA 30301</td>
+      <td>2</td>
+      <td>11.95</td>
+    </tr>
+    <tr>
+      <th>186848</th>
+      <td>162007</td>
+      <td>USB-C Charging Cable</td>
+      <td>1.0</td>
+      <td>11.95</td>
+      <td>02/24/19 19:09</td>
+      <td>715 7th St, Dallas, TX 75001</td>
+      <td>2</td>
+      <td>11.95</td>
+    </tr>
+    <tr>
+      <th>186849</th>
+      <td>162008</td>
+      <td>27in FHD Monitor</td>
+      <td>1.0</td>
+      <td>149.99</td>
+      <td>02/26/19 17:15</td>
+      <td>677 West St, Los Angeles, CA 90001</td>
+      <td>2</td>
+      <td>149.99</td>
+    </tr>
+  </tbody>
+</table>
+<p>185950 rows × 8 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-222b75e9-e973-40f1-b0f8-7b0945ba2d5c')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-222b75e9-e973-40f1-b0f8-7b0945ba2d5c button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-222b75e9-e973-40f1-b0f8-7b0945ba2d5c');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ville</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;Ville&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;Purchase Address&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">ville</span><span class="p">)</span>
+<span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;Ville&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0          New York City
+1                 Austin
+2            Los Angeles
+3                Seattle
+4                 Boston
+               ...      
+186845     San Francisco
+186846       Los Angeles
+186847           Atlanta
+186848            Dallas
+186849       Los Angeles
+Name: Ville, Length: 185950, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Ville&#39;</span><span class="p">)[</span><span class="s1">&#39;Ville&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ville
+ Atlanta          14881
+ Austin            9905
+ Boston           19934
+ Dallas           14820
+ Los Angeles      29605
+ New York City    24876
+ Portland         12465
+ San Francisco    44732
+ Seattle          14732
+Name: Ville, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">all_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Ville&#39;</span><span class="p">)[</span><span class="s1">&#39;Ville&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">,</span><span class="n">all_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Ville&#39;</span><span class="p">)[</span><span class="s1">&#39;Ville&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">())</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="s1">&#39;vertical&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Ville&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Nombre de commande reçu&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/chapter3_28_0.png" src="_images/chapter3_28_0.png" />
+</div>
+</div>
+<p><strong>En quel moment doit on faire une camapgne publicitaire pour avoir plus de vente</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;Hour&#39;</span><span class="p">]</span> <span class="o">=</span>  <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;Order Date&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">hour</span>
+<span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;Hour&#39;</span><span class="p">]</span>  
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0          9
+1         10
+2         14
+3         22
+4         13
+          ..
+186845    22
+186846    20
+186847     6
+186848    19
+186849    17
+Name: Hour, Length: 185950, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">keys</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">hours</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">hour</span> <span class="ow">in</span> <span class="n">all_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Hour&#39;</span><span class="p">):</span>
+  <span class="n">keys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+  <span class="n">hours</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">hour</span><span class="p">))</span>
+ 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span><span class="n">hours</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Heure de la journée&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Nombre de commande&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/chapter3_32_0.png" src="_images/chapter3_32_0.png" />
+</div>
+</div>
+<p><strong>Quels produits se vend le plus</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-ee1e2fca-2bb7-4c23-8aa6-f53a5c90755d">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Order ID</th>
+      <th>Product</th>
+      <th>Quantity Ordered</th>
+      <th>Price Each</th>
+      <th>Order Date</th>
+      <th>Purchase Address</th>
+      <th>Months</th>
+      <th>Sales</th>
+      <th>Ville</th>
+      <th>Hour</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>278797</td>
+      <td>Wired Headphones</td>
+      <td>1.0</td>
+      <td>11.99</td>
+      <td>11/21/19 09:54</td>
+      <td>46 Park St, New York City, NY 10001</td>
+      <td>11</td>
+      <td>11.99</td>
+      <td>New York City</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>278798</td>
+      <td>USB-C Charging Cable</td>
+      <td>2.0</td>
+      <td>11.95</td>
+      <td>11/17/19 10:03</td>
+      <td>962 Hickory St, Austin, TX 73301</td>
+      <td>11</td>
+      <td>23.90</td>
+      <td>Austin</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>278799</td>
+      <td>Apple Airpods Headphones</td>
+      <td>1.0</td>
+      <td>150.00</td>
+      <td>11/19/19 14:56</td>
+      <td>464 Cherry St, Los Angeles, CA 90001</td>
+      <td>11</td>
+      <td>150.00</td>
+      <td>Los Angeles</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>278800</td>
+      <td>27in FHD Monitor</td>
+      <td>1.0</td>
+      <td>149.99</td>
+      <td>11/25/19 22:24</td>
+      <td>649 10th St, Seattle, WA 98101</td>
+      <td>11</td>
+      <td>149.99</td>
+      <td>Seattle</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>278801</td>
+      <td>Bose SoundSport Headphones</td>
+      <td>1.0</td>
+      <td>99.99</td>
+      <td>11/09/19 13:56</td>
+      <td>522 Hill St, Boston, MA 02215</td>
+      <td>11</td>
+      <td>99.99</td>
+      <td>Boston</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>186845</th>
+      <td>162004</td>
+      <td>Apple Airpods Headphones</td>
+      <td>1.0</td>
+      <td>150.00</td>
+      <td>02/12/19 22:02</td>
+      <td>227 Church St, San Francisco, CA 94016</td>
+      <td>2</td>
+      <td>150.00</td>
+      <td>San Francisco</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>186846</th>
+      <td>162005</td>
+      <td>AAA Batteries (4-pack)</td>
+      <td>2.0</td>
+      <td>2.99</td>
+      <td>02/04/19 20:44</td>
+      <td>417 Jefferson St, Los Angeles, CA 90001</td>
+      <td>2</td>
+      <td>5.98</td>
+      <td>Los Angeles</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>186847</th>
+      <td>162006</td>
+      <td>USB-C Charging Cable</td>
+      <td>1.0</td>
+      <td>11.95</td>
+      <td>02/24/19 06:31</td>
+      <td>498 8th St, Atlanta, GA 30301</td>
+      <td>2</td>
+      <td>11.95</td>
+      <td>Atlanta</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>186848</th>
+      <td>162007</td>
+      <td>USB-C Charging Cable</td>
+      <td>1.0</td>
+      <td>11.95</td>
+      <td>02/24/19 19:09</td>
+      <td>715 7th St, Dallas, TX 75001</td>
+      <td>2</td>
+      <td>11.95</td>
+      <td>Dallas</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>186849</th>
+      <td>162008</td>
+      <td>27in FHD Monitor</td>
+      <td>1.0</td>
+      <td>149.99</td>
+      <td>02/26/19 17:15</td>
+      <td>677 West St, Los Angeles, CA 90001</td>
+      <td>2</td>
+      <td>149.99</td>
+      <td>Los Angeles</td>
+      <td>17</td>
+    </tr>
+  </tbody>
+</table>
+<p>185950 rows × 10 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ee1e2fca-2bb7-4c23-8aa6-f53a5c90755d')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-ee1e2fca-2bb7-4c23-8aa6-f53a5c90755d button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-ee1e2fca-2bb7-4c23-8aa6-f53a5c90755d');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Product&#39;</span><span class="p">)[</span><span class="s1">&#39;Quantity Ordered&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Product
+20in Monitor                   4129.0
+27in 4K Gaming Monitor         6244.0
+27in FHD Monitor               7550.0
+34in Ultrawide Monitor         6199.0
+AA Batteries (4-pack)         27635.0
+AAA Batteries (4-pack)        31017.0
+Apple Airpods Headphones      15661.0
+Bose SoundSport Headphones    13457.0
+Flatscreen TV                  4819.0
+Google Phone                   5532.0
+LG Dryer                        646.0
+LG Washing Machine              666.0
+Lightning Charging Cable      23217.0
+Macbook Pro Laptop             4728.0
+ThinkPad Laptop                4130.0
+USB-C Charging Cable          23975.0
+Vareebadd Phone                2068.0
+Wired Headphones              20557.0
+iPhone                         6849.0
+Name: Quantity Ordered, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Product&#39;</span><span class="p">)[</span><span class="s1">&#39;Quantity Ordered&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f4153ad5710&gt;
+</pre></div>
+</div>
+<img alt="_images/chapter3_36_1.png" src="_images/chapter3_36_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Product&#39;</span><span class="p">)[</span><span class="s1">&#39;Price Each&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Product
+20in Monitor                   109.99
+27in 4K Gaming Monitor         389.99
+27in FHD Monitor               149.99
+34in Ultrawide Monitor         379.99
+AA Batteries (4-pack)            3.84
+AAA Batteries (4-pack)           2.99
+Apple Airpods Headphones       150.00
+Bose SoundSport Headphones      99.99
+Flatscreen TV                  300.00
+Google Phone                   600.00
+LG Dryer                       600.00
+LG Washing Machine             600.00
+Lightning Charging Cable        14.95
+Macbook Pro Laptop            1700.00
+ThinkPad Laptop                999.99
+USB-C Charging Cable            11.95
+Vareebadd Phone                400.00
+Wired Headphones                11.99
+iPhone                         700.00
+Name: Price Each, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">produict</span> <span class="o">=</span>  <span class="n">all_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Product&#39;</span><span class="p">)[</span><span class="s1">&#39;Quantity Ordered&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">index</span>
+<span class="n">quantity</span> <span class="o">=</span>  <span class="n">all_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Product&#39;</span><span class="p">)[</span><span class="s1">&#39;Quantity Ordered&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="n">prices</span> <span class="o">=</span> <span class="n">all_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Product&#39;</span><span class="p">)[</span><span class="s1">&#39;Price Each&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">24</span><span class="p">))</span>
+
+<span class="n">fig</span><span class="p">,</span><span class="n">ax1</span> <span class="o">=</span>  <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">produict</span><span class="p">,</span><span class="n">quantity</span><span class="p">,</span><span class="n">color</span><span class="o">=</span> <span class="s1">&#39;g&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">produict</span><span class="p">,</span><span class="n">prices</span><span class="p">,</span><span class="s1">&#39;b-&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">produict</span><span class="p">,</span><span class="n">rotation</span><span class="o">=</span> <span class="s1">&#39;vertical&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 2880x1728 with 0 Axes&gt;
+</pre></div>
+</div>
+<img alt="_images/chapter3_39_1.png" src="_images/chapter3_39_1.png" />
+</div>
+</div>
+<ol class="simple">
+<li><p><strong>Quelles sont les combinaisons de produits qui se vendent le plus</strong></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> <span class="n">df</span> <span class="o">=</span><span class="n">all_data</span><span class="p">[</span><span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;Order ID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">duplicated</span><span class="p">(</span><span class="n">keep</span><span class="o">=</span><span class="kc">False</span><span class="p">)]</span>
+ <span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Grouped&#39;</span><span class="p">]</span><span class="o">=</span>  <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Order ID&#39;</span><span class="p">)[</span><span class="s1">&#39;Product&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:1: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  &quot;&quot;&quot;Entry point for launching an IPython kernel.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-40281275-abec-4131-8e90-5d6eeb508af6">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Order ID</th>
+      <th>Product</th>
+      <th>Quantity Ordered</th>
+      <th>Price Each</th>
+      <th>Order Date</th>
+      <th>Purchase Address</th>
+      <th>Months</th>
+      <th>Sales</th>
+      <th>Ville</th>
+      <th>Hour</th>
+      <th>Grouped</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>9</th>
+      <td>278806</td>
+      <td>Bose SoundSport Headphones</td>
+      <td>1.0</td>
+      <td>99.99</td>
+      <td>11/19/19 19:12</td>
+      <td>174 2nd St, Boston, MA 02215</td>
+      <td>11</td>
+      <td>99.99</td>
+      <td>Boston</td>
+      <td>19</td>
+      <td>Bose SoundSport Headphones,ThinkPad Laptop</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>278806</td>
+      <td>ThinkPad Laptop</td>
+      <td>1.0</td>
+      <td>999.99</td>
+      <td>11/19/19 19:12</td>
+      <td>174 2nd St, Boston, MA 02215</td>
+      <td>11</td>
+      <td>999.99</td>
+      <td>Boston</td>
+      <td>19</td>
+      <td>Bose SoundSport Headphones,ThinkPad Laptop</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>278811</td>
+      <td>Wired Headphones</td>
+      <td>1.0</td>
+      <td>11.99</td>
+      <td>11/06/19 16:01</td>
+      <td>99 Elm St, San Francisco, CA 94016</td>
+      <td>11</td>
+      <td>11.99</td>
+      <td>San Francisco</td>
+      <td>16</td>
+      <td>Wired Headphones,Apple Airpods Headphones</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>278811</td>
+      <td>Apple Airpods Headphones</td>
+      <td>1.0</td>
+      <td>150.00</td>
+      <td>11/06/19 16:01</td>
+      <td>99 Elm St, San Francisco, CA 94016</td>
+      <td>11</td>
+      <td>150.00</td>
+      <td>San Francisco</td>
+      <td>16</td>
+      <td>Wired Headphones,Apple Airpods Headphones</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>278819</td>
+      <td>iPhone</td>
+      <td>1.0</td>
+      <td>700.00</td>
+      <td>11/04/19 06:20</td>
+      <td>880 Maple St, New York City, NY 10001</td>
+      <td>11</td>
+      <td>700.00</td>
+      <td>New York City</td>
+      <td>6</td>
+      <td>iPhone,Apple Airpods Headphones</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>186799</th>
+      <td>161960</td>
+      <td>USB-C Charging Cable</td>
+      <td>2.0</td>
+      <td>11.95</td>
+      <td>02/01/19 11:32</td>
+      <td>867 Cherry St, Boston, MA 02215</td>
+      <td>2</td>
+      <td>23.90</td>
+      <td>Boston</td>
+      <td>11</td>
+      <td>Vareebadd Phone,USB-C Charging Cable</td>
+    </tr>
+    <tr>
+      <th>186811</th>
+      <td>161972</td>
+      <td>Google Phone</td>
+      <td>1.0</td>
+      <td>600.00</td>
+      <td>02/02/19 21:01</td>
+      <td>59 Lincoln St, Austin, TX 73301</td>
+      <td>2</td>
+      <td>600.00</td>
+      <td>Austin</td>
+      <td>21</td>
+      <td>Google Phone,USB-C Charging Cable</td>
+    </tr>
+    <tr>
+      <th>186812</th>
+      <td>161972</td>
+      <td>USB-C Charging Cable</td>
+      <td>1.0</td>
+      <td>11.95</td>
+      <td>02/02/19 21:01</td>
+      <td>59 Lincoln St, Austin, TX 73301</td>
+      <td>2</td>
+      <td>11.95</td>
+      <td>Austin</td>
+      <td>21</td>
+      <td>Google Phone,USB-C Charging Cable</td>
+    </tr>
+    <tr>
+      <th>186837</th>
+      <td>161997</td>
+      <td>Google Phone</td>
+      <td>1.0</td>
+      <td>600.00</td>
+      <td>02/28/19 22:15</td>
+      <td>845 8th St, San Francisco, CA 94016</td>
+      <td>2</td>
+      <td>600.00</td>
+      <td>San Francisco</td>
+      <td>22</td>
+      <td>Google Phone,USB-C Charging Cable</td>
+    </tr>
+    <tr>
+      <th>186838</th>
+      <td>161997</td>
+      <td>USB-C Charging Cable</td>
+      <td>1.0</td>
+      <td>11.95</td>
+      <td>02/28/19 22:15</td>
+      <td>845 8th St, San Francisco, CA 94016</td>
+      <td>2</td>
+      <td>11.95</td>
+      <td>San Francisco</td>
+      <td>22</td>
+      <td>Google Phone,USB-C Charging Cable</td>
+    </tr>
+  </tbody>
+</table>
+<p>14649 rows × 11 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-40281275-abec-4131-8e90-5d6eeb508af6')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-40281275-abec-4131-8e90-5d6eeb508af6 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-40281275-abec-4131-8e90-5d6eeb508af6');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Grouped&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9         Bose SoundSport Headphones,ThinkPad Laptop
+10        Bose SoundSport Headphones,ThinkPad Laptop
+15         Wired Headphones,Apple Airpods Headphones
+16         Wired Headphones,Apple Airpods Headphones
+24                   iPhone,Apple Airpods Headphones
+                             ...                    
+186799          Vareebadd Phone,USB-C Charging Cable
+186811             Google Phone,USB-C Charging Cable
+186812             Google Phone,USB-C Charging Cable
+186837             Google Phone,USB-C Charging Cable
+186838             Google Phone,USB-C Charging Cable
+Name: Grouped, Length: 14649, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Order ID&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;Grouped&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pie</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f4157469450&gt;
+</pre></div>
+</div>
+<img alt="_images/chapter3_46_1.png" src="_images/chapter3_46_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> <span class="n">all_data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;My_all_data.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df2</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;grouped_data.csv&#39;</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By OSCAR HOUESSOU<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

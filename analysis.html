@@ -1,0 +1,960 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; Mon portfolio</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/oscar.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mon portfolio</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/Oscar12-design/portfolio_book/master?urlpath=tree/docs/analysis.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/Oscar12-design/portfolio_book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/Oscar12-design/portfolio_book/issues/new?title=Issue%20on%20page%20%2Fanalysis.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/analysis.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1><no title></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">suppressMessages</span><span class="p">(</span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;readxl&quot;</span><span class="p">))</span>
+<span class="nf">suppressMessages</span><span class="p">(</span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;fBasics&quot;</span><span class="p">))</span>
+<span class="nf">suppressMessages</span><span class="p">(</span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;quantmod&quot;</span><span class="p">))</span>
+<span class="nf">suppressMessages</span><span class="p">(</span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;fGarch&quot;</span><span class="p">))</span>
+<span class="nf">suppressMessages</span><span class="p">(</span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;forecast&quot;</span><span class="p">))</span>
+<span class="nf">suppressMessages</span><span class="p">(</span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;tseries&quot;</span><span class="p">))</span>
+<span class="nf">suppressMessages</span><span class="p">(</span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;rugarch&quot;</span><span class="p">))</span>
+<span class="nf">suppressMessages</span><span class="p">(</span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;strucchange&quot;</span><span class="p">))</span>
+<span class="nf">suppressMessages</span><span class="p">(</span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;urca&quot;</span><span class="p">))</span>
+<span class="nf">suppressMessages</span><span class="p">(</span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;vars&quot;</span><span class="p">))</span>
+<span class="nf">suppressMessages</span><span class="p">(</span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;dynlm&quot;</span><span class="p">))</span>
+<span class="nf">suppressMessages</span><span class="p">(</span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;sandwich&quot;</span><span class="p">))</span>
+<span class="nf">suppressMessages</span><span class="p">(</span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;zoo&quot;</span><span class="p">))</span>
+<span class="nf">suppressMessages</span><span class="p">(</span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;tidyverse&quot;</span><span class="p">))</span>
+<span class="nf">suppressMessages</span><span class="p">(</span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;tsDyn&quot;</span><span class="p">))</span>
+<span class="nf">suppressMessages</span><span class="p">(</span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;FinTS&quot;</span><span class="p">))</span>
+<span class="nf">suppressMessages</span><span class="p">(</span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;lmtest&quot;</span><span class="p">))</span>
+<span class="nf">suppressMessages</span><span class="p">(</span><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>INTRODUCTION</p>
+<p>In this work we aim to model the performance of NASDAQ which is a stock exchange opened in 1971, currently the second largest stock market in the United States, by volume traded, behind the New York Stock Exchange. It is the largest electronic stock market in the world.
+We used the ARIMA model for the analysis of the company’s historical data and thanks to this same model had forecasts.</p>
+<p>Methodology</p>
+<p>The historical data of NASDAQ is the opening, closing, low and high price of the company’s stock. This data is daily and covers the period from 2018-01-02 to 2022-08-05. Our analysis focused on the Adj.close column.
+The adjusted closing price changes the closing price of a stock to reflect the value of that stock after any stock is accounted for. It is often used when reviewing historical performance or a detailed analysis of past performance.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span>
+
+<span class="n">all_data</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;IXIC.csv&quot;</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">all_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">1157</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">7</span>
+<span class=" -Color -Color-Cyan">--</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">------------------------------------------------------------------------------------------------</span>
+<span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
+<span class=" -Color -Color-Green">dbl</span>  (6): Open, High, Low, Close, Adj Close, Volume
+<span class=" -Color -Color-Blue">date</span> (1): Date
+
+<span class=" -Color -Color-Cyan">i</span> Use <span class=" -Color -Color-Black -Color-Black-BGWhite">`spec()`</span> to retrieve the full column specification for this data.
+<span class=" -Color -Color-Cyan">i</span> Specify the column types or set <span class=" -Color -Color-Black -Color-Black-BGWhite">`show_col_types = FALSE`</span> to quiet this message.
+</pre></div>
+</div>
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 6 × 7</caption>
+<thead>
+	<tr><th scope=col>Date</th><th scope=col>Open</th><th scope=col>High</th><th scope=col>Low</th><th scope=col>Close</th><th scope=col>Adj Close</th><th scope=col>Volume</th></tr>
+	<tr><th scope=col>&lt;date&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>2018-01-02</td><td>6937.65</td><td>7006.91</td><td>6924.08</td><td>7006.90</td><td>7006.90</td><td>1914930000</td></tr>
+	<tr><td>2018-01-03</td><td>7017.07</td><td>7069.15</td><td>7016.70</td><td>7065.53</td><td>7065.53</td><td>2166780000</td></tr>
+	<tr><td>2018-01-04</td><td>7089.50</td><td>7098.05</td><td>7072.38</td><td>7077.91</td><td>7077.91</td><td>2098890000</td></tr>
+	<tr><td>2018-01-05</td><td>7105.74</td><td>7137.04</td><td>7097.08</td><td>7136.56</td><td>7136.56</td><td>2020900000</td></tr>
+	<tr><td>2018-01-08</td><td>7135.38</td><td>7161.35</td><td>7124.09</td><td>7157.39</td><td>7157.39</td><td>2051430000</td></tr>
+	<tr><td>2018-01-09</td><td>7174.19</td><td>7181.14</td><td>7148.30</td><td>7163.58</td><td>7163.58</td><td>2107300000</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">summary</span><span class="p">(</span><span class="n">all_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      Date                 Open            High            Low       
+ Min.   :2018-01-02   Min.   : 6258   Min.   : 6355   Min.   : 6190  
+ 1st Qu.:2019-02-27   1st Qu.: 7766   1st Qu.: 7826   1st Qu.: 7717  
+ Median :2020-04-21   Median : 9301   Median : 9325   Median : 9226  
+ Mean   :2020-04-19   Mean   :10360   Mean   :10436   Mean   :10273  
+ 3rd Qu.:2021-06-14   3rd Qu.:13263   3rd Qu.:13399   3rd Qu.:13079  
+ Max.   :2022-08-05   Max.   :16121   Max.   :16212   Max.   :16017  
+     Close         Adj Close         Volume         
+ Min.   : 6193   Min.   : 6193   Min.   :1.494e+08  
+ 1st Qu.: 7785   1st Qu.: 7785   1st Qu.:2.183e+09  
+ Median : 9275   Median : 9275   Median :3.575e+09  
+ Mean   :10360   Mean   :10360   Mean   :3.580e+09  
+ 3rd Qu.:13247   3rd Qu.:13247   3rd Qu.:4.601e+09  
+ Max.   :16057   Max.   :16057   Max.   :1.110e+10  
+</pre></div>
+</div>
+</div>
+</div>
+<p>ARIMA model
+ARIMA stands for Auto-Regressive Integrated Moving Average. It is also known as the Box-Jenkins approach. It is one of the most popular techniques used for time series analysis and forecasting purposes. The ARIMA model has two components:</p>
+<ol class="simple">
+<li><p>Autoregressive component</p></li>
+<li><p>Moving average component</p></li>
+<li><p>Auto-regressive component</p></li>
+</ol>
+<p>It involves the relationship of a value of a series at a given time with its own previous values. Such a relationship can exist with any lag order. The lag is essentially a value at a previous time. It can have different orders.</p>
+<ol class="simple">
+<li><p>Moving average component
+The moving average is the average of consecutive values at different periods. It can have different orders.</p></li>
+</ol>
+<p>The auto-regressive (lag-based) and moving average components are used together by the ARIMA technique to forecast a time series.</p>
+<p>The modeling process with the ARIMA model can be presented as follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">!</span><span class="p">[</span><span class="n">Processus</span> <span class="n">de</span> <span class="n">modélisation</span> <span class="n">avec</span> <span class="n">Arima</span><span class="p">](</span><span class="n">arimaflowchart.png</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Error</span> <span class="ow">in</span> <span class="n">parse</span><span class="p">(</span><span class="n">text</span> <span class="o">=</span> <span class="n">x</span><span class="p">,</span> <span class="n">srcfile</span> <span class="o">=</span> <span class="n">src</span><span class="p">):</span> <span class="o">&lt;</span><span class="n">text</span><span class="o">&gt;</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span> <span class="n">unexpected</span> <span class="s1">&#39;[&#39;</span>
+<span class="mi">1</span><span class="p">:</span> <span class="o">![</span>
+     <span class="o">^</span>
+<span class="ne">Traceback</span>:
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Graph of Adj.close evolution during the study period</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">all_data</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">Date</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">`Adj Close`</span><span class="p">))</span> <span class="o">+</span> <span class="nf">geom_line</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;darkblue&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="nf">ggtitle</span><span class="p">(</span><span class="s">&quot;Adj Close prices series&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="nf">xlab</span><span class="p">(</span><span class="s">&quot;Date&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;Price&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="nf">theme</span><span class="p">(</span><span class="n">plot.title</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">hjust</span> <span class="o">=</span> <span class="m">0.5</span><span class="p">))</span> <span class="o">+</span> <span class="nf">scale_x_date</span><span class="p">(</span><span class="n">date_labels</span> <span class="o">=</span> <span class="s">&quot;%b %y&quot;</span><span class="p">,</span> <span class="n">date_breaks</span> <span class="o">=</span> <span class="s">&quot;6 months&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/analysis_7_0.png" src="_images/analysis_7_0.png" />
+</div>
+</div>
+<p>The NASDAQ Adj.close time series graph shows an upward trend over time.
+There is no evidence of variance variation, so we will not do a Box-Cox transformation.
+The data are clearly non-stationary, as the series moves up and down for long periods of time.</p>
+<p>In technical analysis of stocks, a widely used technique is to plot moving averages on price charts. A simple moving average is an arithmetic average of the last
+q days from an Xt series in the t time period. Thus, the moving average MUN qt
+is given by:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">pbr_mm</span> <span class="o">&lt;-</span> <span class="nf">subset</span><span class="p">(</span><span class="n">all_data</span><span class="p">,</span><span class="n">all_data</span><span class="o">$</span><span class="n">Date</span> <span class="o">&gt;=</span> <span class="s">&quot;2020-01-01&quot;</span><span class="p">)</span>
+
+<span class="n">pbr_mm10</span> <span class="o">&lt;-</span> <span class="nf">rollmean</span><span class="p">(</span><span class="n">pbr_mm</span><span class="p">[,</span><span class="m">6</span><span class="p">],</span> <span class="m">10</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="kc">NA</span><span class="p">,</span> <span class="kc">NULL</span><span class="p">,</span> <span class="kc">NA</span><span class="p">),</span> <span class="n">align</span> <span class="o">=</span> <span class="s">&quot;right&quot;</span><span class="p">)</span>
+<span class="n">pbr_mm30</span> <span class="o">&lt;-</span> <span class="nf">rollmean</span><span class="p">(</span><span class="n">pbr_mm</span><span class="p">[,</span><span class="m">6</span><span class="p">],</span> <span class="m">30</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="kc">NA</span><span class="p">,</span> <span class="kc">NULL</span><span class="p">,</span> <span class="kc">NA</span><span class="p">),</span> <span class="n">align</span> <span class="o">=</span> <span class="s">&quot;right&quot;</span><span class="p">)</span>
+
+<span class="n">pbr_mm</span><span class="o">$</span><span class="n">mm10</span> <span class="o">&lt;-</span> <span class="nf">coredata</span><span class="p">(</span><span class="n">pbr_mm10</span><span class="p">)</span>
+<span class="n">pbr_mm</span><span class="o">$</span><span class="n">mm30</span> <span class="o">&lt;-</span> <span class="nf">coredata</span><span class="p">(</span><span class="n">pbr_mm30</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">pbr_mm</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">Date</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_line</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="n">`Adj Close`</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;PBR&quot;</span><span class="p">))</span> <span class="o">+</span> <span class="nf">ggtitle</span><span class="p">(</span><span class="s">&quot;Petrobras prices series&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_line</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="n">pbr_mm</span><span class="o">$</span><span class="n">mm10</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;MM10&quot;</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_line</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="n">pbr_mm</span><span class="o">$</span><span class="n">mm30</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;MM30&quot;</span><span class="p">))</span> <span class="o">+</span> <span class="nf">xlab</span><span class="p">(</span><span class="s">&quot;Date&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;Price&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">theme</span><span class="p">(</span><span class="n">plot.title</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">hjust</span> <span class="o">=</span> <span class="m">0.5</span><span class="p">),</span> <span class="n">panel.border</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">())</span> <span class="o">+</span>
+  <span class="nf">scale_x_date</span><span class="p">(</span><span class="n">date_labels</span> <span class="o">=</span> <span class="s">&quot;%b %y&quot;</span><span class="p">,</span> <span class="n">date_breaks</span> <span class="o">=</span> <span class="s">&quot;3 months&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_colour_manual</span><span class="p">(</span><span class="s">&quot;Series&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;PBR&quot;</span><span class="o">=</span><span class="s">&quot;gray40&quot;</span><span class="p">,</span> <span class="s">&quot;MM10&quot;</span><span class="o">=</span><span class="s">&quot;firebrick4&quot;</span><span class="p">,</span> <span class="s">&quot;MM30&quot;</span><span class="o">=</span><span class="s">&quot;darkcyan&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+&quot;Use of `pbr_mm$mm10` is discouraged. Use `mm10` instead.&quot;
+Warning message:
+&quot;Use of `pbr_mm$mm30` is discouraged. Use `mm30` instead.&quot;
+Warning message:
+&quot;Removed 9 row(s) containing missing values (geom_path).&quot;
+Warning message:
+&quot;Removed 29 row(s) containing missing values (geom_path).&quot;
+</pre></div>
+</div>
+<img alt="_images/analysis_10_1.png" src="_images/analysis_10_1.png" />
+</div>
+</div>
+<p>We have seen how stock prices have changed over time. Now we will check how the stock returns have behaved over the same period. To do this, we first need to create a new object with the calculated returns, using the adjusted price column :</p>
+<p>The stationarity of the data can be known by applying the unit root tests - Augmented Dickey-Fuller (ADF) test.
+The null hypothesis for an ADF test is that the data are not stationary. Thus, a p-value greater than 0.05 indicates non-stationarity and p-values less than 0.05 suggest stationarity.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">adf</span> <span class="o">=</span> <span class="nf">adf.test</span><span class="p">(</span><span class="n">all_data</span><span class="o">$</span><span class="n">`Adj Close`</span><span class="p">)</span>
+
+<span class="n">adf</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Augmented Dickey-Fuller Test
+
+data:  all_data$`Adj Close`
+Dickey-Fuller = -1.6494, Lag order = 10, p-value = 0.7267
+alternative hypothesis: stationary
+</pre></div>
+</div>
+</div>
+</div>
+<p>pvalue &gt;0.5 then our data from Adj.close is non-stationary.</p>
+<p>Since the series is non-stationary we use differentiation - calculating the differences between consecutive observations.</p>
+<p>Let’s use the functions ndiffs(),diff() to find the number of times the difference needed for the data and to differentiate the data respectively.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Number of Difference Required to make data stationary</span>
+<span class="nf">ndiffs</span><span class="p">(</span><span class="n">all_data</span><span class="o">$</span><span class="n">`Adj Close`</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">1</div></div>
+</div>
+<p>Thus, we need to differentiate the series once to make it stationary</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">diff_data</span> <span class="o">=</span> <span class="nf">ts</span><span class="p">(</span><span class="nf">diff</span><span class="p">(</span><span class="n">all_data</span><span class="o">$</span><span class="n">`Adj Close`</span><span class="p">,</span> <span class="n">lag</span> <span class="o">=</span> <span class="m">1</span><span class="p">))</span>
+<span class="nf">adf.test</span><span class="p">(</span><span class="n">diff_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message in adf.test(diff_data):
+&quot;p-value smaller than printed p-value&quot;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Augmented Dickey-Fuller Test
+
+data:  diff_data
+Dickey-Fuller = -9.7226, Lag order = 10, p-value = 0.01
+alternative hypothesis: stationary
+</pre></div>
+</div>
+</div>
+</div>
+<p>Thus, we have just stationed our series.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">plot.ts</span><span class="p">(</span><span class="n">diff_data</span><span class="p">,</span><span class="n">col</span> <span class="o">=</span> <span class="s">&quot;blue&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/analysis_18_0.png" src="_images/analysis_18_0.png" />
+</div>
+</div>
+<p>Model identification and estimation</p>
+<p>We can do model identification in two ways:</p>
+<p>1 . Using the ACF and PACF functions</p>
+<ol class="simple">
+<li><p>Use of the minimum information criteria matrix</p></li>
+</ol>
+<p>Method I: ACF and PACF functions</p>
+<p>Autocorrelation function (ACF)</p>
+<p>Autocorrelation is a correlation coefficient. However, instead of a correlation between two different variables, the correlation is between two values of the same variable at times Xt and Xt-h. Correlation between two or more lags.</p>
+<p>If the time series is a moving average of order 1, called MA(1), we should only see one significant autocorrelation coefficient at lag 1. This is because an MA(1) process has a memory of only one period. If the time series is an MA(2), we should only see two significant autocorrelation coefficients, at lags 1 and 2, because an MA(2) process has a memory of only two periods.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">acf</span><span class="p">(</span><span class="n">diff_data</span><span class="p">,</span> <span class="n">lag.max</span> <span class="o">=</span> <span class="m">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/analysis_20_0.png" src="_images/analysis_20_0.png" />
+</div>
+</div>
+<p>The ACF graph suggests an MA(1) model</p>
+<p>Partial autocorrelation function (PACF)</p>
+<p>For a time series, the partial autocorrelation between xt and xt-h is defined as the conditional correlation between xt and xt-h, conditional on xt-h+1, … , xt-1, the set of observations that lie between times t and t-h.</p>
+<p>If the time series has an autoregressive order of 1, called AR(1), then only the first partial autocorrelation coefficient should be considered significant. If it has an AR(2), then only the first and second partial autocorrelation coefficients should be considered significant.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">pacf</span><span class="p">(</span><span class="n">diff_data</span><span class="p">,</span> <span class="n">lag.max</span> <span class="o">=</span> <span class="m">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/analysis_22_0.png" src="_images/analysis_22_0.png" />
+</div>
+</div>
+<p>Method II: Minimum AIC / BIC criteria</p>
+<p>Let us fit a series of ARIMA models with combinations of p, d and q and select the model with the minimum AIC / BIC.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#Automatic Selection Algorithm - Fast</span>
+<span class="nf">auto.arima</span><span class="p">(</span><span class="n">diff_data</span><span class="p">,</span> <span class="n">trace</span><span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="n">ic</span> <span class="o">=</span><span class="s">&quot;aicc&quot;</span><span class="p">,</span> <span class="n">approximation</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+<span class="c1">#Auto Algorithm - Slow but more accurate</span>
+<span class="nf">auto.arima</span><span class="p">(</span><span class="n">diff_data</span><span class="p">,</span> <span class="n">trace</span><span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="n">ic</span> <span class="o">=</span><span class="s">&quot;aicc&quot;</span><span class="p">,</span> <span class="n">approximation</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="n">stepwise</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> ARIMA(2,0,2) with non-zero mean : Inf
+ ARIMA(0,0,0) with non-zero mean : 15058.69
+ ARIMA(1,0,0) with non-zero mean : 15046.58
+ ARIMA(0,0,1) with non-zero mean : 15047.98
+ ARIMA(0,0,0) with zero mean     : 15057.73
+ ARIMA(2,0,0) with non-zero mean : 15045.49
+ ARIMA(3,0,0) with non-zero mean : 15047.22
+ ARIMA(2,0,1) with non-zero mean : 15047.36
+ ARIMA(1,0,1) with non-zero mean : 15045.79
+ ARIMA(3,0,1) with non-zero mean : 15048.78
+ ARIMA(2,0,0) with zero mean     : 15044.65
+ ARIMA(1,0,0) with zero mean     : 15045.87
+ ARIMA(3,0,0) with zero mean     : 15046.4
+ ARIMA(2,0,1) with zero mean     : 15046.52
+ ARIMA(1,0,1) with zero mean     : 15045.01
+ ARIMA(3,0,1) with zero mean     : Inf
+
+ Best model: ARIMA(2,0,0) with zero mean     
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Series: diff_data 
+ARIMA(2,0,0) with zero mean 
+
+Coefficients:
+          ar1     ar2
+      -0.1034  0.0528
+s.e.   0.0294  0.0293
+
+sigma^2 = 26187:  log likelihood = -7519.31
+AIC=15044.63   AICc=15044.65   BIC=15059.79
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> ARIMA(0,0,0) with zero mean     : 15057.73
+ ARIMA(0,0,0) with non-zero mean : 15058.69
+ ARIMA(0,0,1) with zero mean     : 15047.27
+ ARIMA(0,0,1) with non-zero mean : 15047.98
+ ARIMA(0,0,2) with zero mean     : 15045.15
+ ARIMA(0,0,2) with non-zero mean : 15046.01
+ ARIMA(0,0,3) with zero mean     : 15046.25
+ ARIMA(0,0,3) with non-zero mean : 15047.04
+ ARIMA(0,0,4) with zero mean     : 15048.26
+ ARIMA(0,0,4) with non-zero mean : 15049.05
+ ARIMA(0,0,5) with zero mean     : 15049.51
+ ARIMA(0,0,5) with non-zero mean : 15050.24
+ ARIMA(1,0,0) with zero mean     : 15045.87
+ ARIMA(1,0,0) with non-zero mean : 15046.58
+ ARIMA(1,0,1) with zero mean     : 15045.01
+ ARIMA(1,0,1) with non-zero mean : 15045.79
+ ARIMA(1,0,2) with zero mean     : 15046.45
+ ARIMA(1,0,2) with non-zero mean : 15047.3
+ ARIMA(1,0,3) with zero mean     : Inf
+ ARIMA(1,0,3) with non-zero mean : Inf
+ ARIMA(1,0,4) with zero mean     : Inf
+ ARIMA(1,0,4) with non-zero mean : Inf
+ ARIMA(2,0,0) with zero mean     : 15044.65
+ ARIMA(2,0,0) with non-zero mean : 15045.49
+ ARIMA(2,0,1) with zero mean     : 15046.52
+ ARIMA(2,0,1) with non-zero mean : 15047.36
+ ARIMA(2,0,2) with zero mean     : Inf
+ ARIMA(2,0,2) with non-zero mean : Inf
+ ARIMA(2,0,3) with zero mean     : Inf
+ ARIMA(2,0,3) with non-zero mean : Inf
+ ARIMA(3,0,0) with zero mean     : 15046.4
+ ARIMA(3,0,0) with non-zero mean : 15047.22
+ ARIMA(3,0,1) with zero mean     : Inf
+ ARIMA(3,0,1) with non-zero mean : 15048.78
+ ARIMA(3,0,2) with zero mean     : Inf
+ ARIMA(3,0,2) with non-zero mean : Inf
+ ARIMA(4,0,0) with zero mean     : 15048.06
+ ARIMA(4,0,0) with non-zero mean : 15048.84
+ ARIMA(4,0,1) with zero mean     : Inf
+ ARIMA(4,0,1) with non-zero mean : Inf
+ ARIMA(5,0,0) with zero mean     : 15050.08
+ ARIMA(5,0,0) with non-zero mean : 15050.86
+
+
+
+ Best model: ARIMA(2,0,0) with zero mean     
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Series: diff_data 
+ARIMA(2,0,0) with zero mean 
+
+Coefficients:
+          ar1     ar2
+      -0.1034  0.0528
+s.e.   0.0294  0.0293
+
+sigma^2 = 26187:  log likelihood = -7519.31
+AIC=15044.63   AICc=15044.65   BIC=15059.79
+</pre></div>
+</div>
+</div>
+</div>
+<p>The best model is obtained with p=2 ,d=0,q=0</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">finalmodel</span> <span class="o">=</span> <span class="nf">arima</span><span class="p">(</span><span class="n">diff_data</span><span class="p">,</span> <span class="n">order</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">))</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">finalmodel</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Call:
+arima(x = diff_data, order = c(2, 0, 0))
+
+Coefficients:
+          ar1     ar2  intercept
+      -0.1045  0.0517     4.8700
+s.e.   0.0294  0.0293     4.5148
+
+sigma^2 estimated as 26116:  log likelihood = -7518.73,  aic = 15045.46
+
+Training set error measures:
+                     ME     RMSE      MAE  MPE MAPE      MASE         ACF1
+Training set 0.02414964 161.6033 111.6843 -Inf  Inf 0.6712028 0.0007579002
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">finalmodel</span><span class="o">$</span><span class="n">residuals</span>
+<span class="nf">acf</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<span class="nf">pacf</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+
+<span class="nf">Box.test</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">lag</span> <span class="o">=</span> <span class="m">5</span><span class="p">,</span><span class="n">type</span> <span class="o">=</span> <span class="s">&quot;Ljung&quot;</span><span class="p">)</span>
+<span class="nf">Box.test</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">lag</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span><span class="n">type</span> <span class="o">=</span> <span class="s">&quot;Ljung&quot;</span><span class="p">)</span>
+<span class="nf">Box.test</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">lag</span> <span class="o">=</span> <span class="m">20</span><span class="p">,</span><span class="n">type</span> <span class="o">=</span> <span class="s">&quot;Ljung&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/analysis_27_0.png" src="_images/analysis_27_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Box-Ljung test
+
+data:  res
+X-squared = 0.69957, df = 5, p-value = 0.983
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Box-Ljung test
+
+data:  res
+X-squared = 40.989, df = 10, p-value = 1.133e-05
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Box-Ljung test
+
+data:  res
+X-squared = 61.78, df = 20, p-value = 3.764e-06
+</pre></div>
+</div>
+<img alt="_images/analysis_27_4.png" src="_images/analysis_27_4.png" />
+</div>
+</div>
+<p>Multiple comparison of AIC criteria obtained by different ARIMA models</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">AIC</span><span class="p">(</span><span class="nf">arima</span><span class="p">(</span><span class="n">diff_data</span><span class="p">,</span> <span class="n">order</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">),</span> <span class="n">seasonal</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="n">order</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">),</span> <span class="n">period</span> <span class="o">=</span> <span class="m">12</span><span class="p">)),</span>
+    <span class="nf">arima</span><span class="p">(</span><span class="n">diff_data</span><span class="p">,</span> <span class="n">order</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">),</span> <span class="n">seasonal</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="n">order</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">),</span> <span class="n">period</span> <span class="o">=</span> <span class="m">12</span><span class="p">)),</span>
+    <span class="nf">arima</span><span class="p">(</span><span class="n">diff_data</span><span class="p">,</span> <span class="n">order</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">3</span><span class="p">),</span> <span class="n">seasonal</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="n">order</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">),</span> <span class="n">period</span> <span class="o">=</span> <span class="m">12</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 3 × 2</caption>
+<thead>
+	<tr><th></th><th scope=col>df</th><th scope=col>AIC</th></tr>
+	<tr><th></th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>arima(diff_data, order = c(1, 0, 0), seasonal = list(order = c(2, 0, 0), period = 12))</th><td>5</td><td>15050.45</td></tr>
+	<tr><th scope=row>arima(diff_data, order = c(2, 0, 0), seasonal = list(order = c(2, 0, 0), period = 12))</th><td>6</td><td>15049.28</td></tr>
+	<tr><th scope=row>arima(diff_data, order = c(0, 0, 3), seasonal = list(order = c(2, 0, 0), period = 12))</th><td>7</td><td>15050.80</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<p>Residual Diagnostics</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check whether the residuals look like white noise (Independent)</span>
+<span class="c1"># p&gt;0.05 then the residuals are independent (white noise)</span>
+<span class="nf">tsdisplay</span><span class="p">(</span><span class="nf">residuals</span><span class="p">(</span><span class="n">finalmodel</span><span class="p">))</span>
+<span class="nf">Box.test</span><span class="p">(</span><span class="n">finalmodel</span><span class="o">$</span><span class="n">residuals</span><span class="p">,</span> <span class="n">lag</span> <span class="o">=</span> <span class="m">20</span><span class="p">,</span> <span class="n">type</span> <span class="o">=</span> <span class="s">&quot;Ljung-Box&quot;</span><span class="p">)</span>
+<span class="c1"># p-values shown for the Ljung-Box statistic plot are incorrect so calculate</span>
+<span class="c1">#critical chi squared value</span>
+<span class="c1"># Chi-squared 20 d.f. and critical value at the 0.05</span>
+<span class="nf">qchisq</span><span class="p">(</span><span class="m">0.05</span><span class="p">,</span> <span class="m">20</span><span class="p">,</span> <span class="n">lower.tail</span> <span class="o">=</span> <span class="bp">F</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Box-Ljung test
+
+data:  finalmodel$residuals
+X-squared = 61.78, df = 20, p-value = 3.764e-06
+</pre></div>
+</div>
+<div class="output text_html">31.4104328442309</div><img alt="_images/analysis_31_2.png" src="_images/analysis_31_2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#Forecasting</span>
+<span class="c1"># predict the next 20 periods</span>
+
+<span class="p">(</span><span class="n">fit</span> <span class="o">&lt;-</span> <span class="nf">Arima</span><span class="p">(</span><span class="n">diff_data</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Series: diff_data 
+ARIMA(2,0,0) with non-zero mean 
+
+Coefficients:
+          ar1     ar2    mean
+      -0.1045  0.0517  4.8700
+s.e.   0.0294  0.0293  4.5148
+
+sigma^2 = 26184:  log likelihood = -7518.73
+AIC=15045.46   AICc=15045.49   BIC=15065.67
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">checkresiduals</span><span class="p">(</span><span class="n">fit</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Ljung-Box test
+
+data:  Residuals from ARIMA(2,0,0) with non-zero mean
+Q* = 40.989, df = 7, p-value = 8.135e-07
+
+Model df: 3.   Total lags used: 10
+</pre></div>
+</div>
+<img alt="_images/analysis_33_1.png" src="_images/analysis_33_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">autoplot</span><span class="p">(</span><span class="nf">forecast</span><span class="p">(</span><span class="n">fit</span><span class="p">,</span><span class="m">20</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/analysis_34_0.png" src="_images/analysis_34_0.png" />
+</div>
+</div>
+<p>Conclusion</p>
+<p>The Adj.close financial data was initially non-stationary. We had to differentiate once to make these data stationary. After several simulations and by comparing the AIC/BIC obtained for each model we retained the order (p=2, d=0,q=0) as being the best model. The Arima(2,0,0) model allowed us to model the prices of Adj.close of the NASDAQ company, and also to make forecasts. We had to check if the residuals are normally distributed with a zero mean and a constant variance</p>
+<p>Bibliography</p>
+<p>Hyndman, RJ and Khandakar, Y. (2008). Automatic time series forecasting: the forecasting package for R . Journal of Statistical Software , 27 (1), 1-22</p>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            kernelName: "ir",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Welcome to your Jupyter Book</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By OSCAR HOUESSOU<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
